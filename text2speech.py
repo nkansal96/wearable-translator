@@ -49,8 +49,7 @@ while flag:
 
 		print('Conversion completed. Playing audio..')
 		playsound('output.mp3')
-		flag = utils.shouldContinue(input('Audio played successfully. 
-		Type \'yes\' to continue \'no\' to quit: '))
+		flag = utils.shouldContinue(input('Audio played successfully. Type \'yes\' to continue \'no\' to quit: '))
 	else:
 		print('Input cannot be empty. Please enter a phrase or sentence for conversion')
 
