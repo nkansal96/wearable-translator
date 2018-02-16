@@ -1,7 +1,10 @@
 from google.cloud import translate
+import os
 
 # target language is by iso 639-1
 def translate_text(text, target='es'):
+
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="apikey.json"
 
     translate_client = translate.Client()
 
