@@ -1,0 +1,24 @@
+#!/bin/bash
+clear
+echo "Aurora ready to listen."
+
+
+read -n1 -r -p "" key
+
+if [ "$key" = '' ]; then
+    aplay sound1.wav >/dev/null 2>&1
+    {
+    STR=$(python2 sttR.py)
+    } 1>/dev/null 2>&1
+
+    aplay sound2.wav >/dev/null 2>&1
+    LENGTH=$(echo -n "$STR" | wc -c)
+    echo $LENGTH
+    if [ $LENGTH -eq 0 ]; then
+        echo "I didn't hear anything :'("
+    else
+        echo $STR
+    fi
+else
+    echo "Do nothing"
+fi
