@@ -10,11 +10,13 @@ http://docs.python-guide.org/en/latest/starting/install3/osx/
 ----DEPENDANCIES---- (execute the provided commands in the terminal)
 
 1. Watson API python SDK
-command: pip3 install --upgrade watson-developer-cloud
+command: pip2 install --upgrade watson-developer-cloud
 
 2. Audio play service
-command: pip3 install playsound
+command: pip2 install playsound
 
+3. Audio Dependencies
+command: pip2 install -U PyObjC
 
 ----CONFIGURATION----
 
