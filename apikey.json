@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "seismic-rarity-161023",
+  "private_key_id": "8bcfecdf10a8b7c18fa2652368ef31b48b283107",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCNNyT6rf1EVqaX\n7LrU99sHuxZsAeyt+Ir6sb3CnLgI5M1SrcbXo1kp5Rgwt06VPnwuYImTRHyDa63g\naFY+xeYOLB1tQkzr1kWVtUsGw82QpP4SYu6Agl66bo0oN7FU5H2DrC9EnDNwfEJq\nm3b7PB+AkvkNhLJuDgYyS3DEMnYaU1rkGZTJomupM5Og47xZZK4+k5n4Z8OKGcZN\nW1jagdC536RFLwjOR+RKzwbN88pLU0s5azZy6XrXAjH+2g5ugpDqmV+Zm0FL07cu\nvS6dINwgge+a+pWAqXzZO/wr8VizAvSs0O0MqvisVv/Xu0mKHOOLfLduyw8uwI7E\nCMBClAF5AgMBAAECggEAHEV0fU1U/Zf9bUADHXzrmE4fzIrMF/5A0LTB4VLf00P/\nSTSqMOSuhqEraSFhtaZXVS+Vi2q0JNlra5hn39Rd3Ot/Dq8t2C9DKhgsB5QutO0b\nQpIU3px7G4bjcrBHq8+8wx43Lly5PaVa5J3wQZcFVYfXHZo54KelHO+WiWjy1Q0b\n2U3jFuvYUKpIg9s2EzeGrE2xN4yYgLtHSMZh8JbqB4yEE+YtowbU6N/FgOSFAmTB\nJFKSUSZ/MW7IdxbosdRuoV0UdSpsNDZily7aSsURbBV3hStzL7IcTcgfZOUyV/3D\nhBTHGyRKbj4oGJCW3t1ueK5GraOBKCO5HX2S5l/CqQKBgQDG7AsIhEVp1Cb8/Mtr\neAtcS3wkbR83XJJPnk6eY9/2DsULhm9H8y5unFW7pQo9tcAKniWsvT2AvhmX6dEL\n/eKudukDnyjE+kT6T3bSK1z+T6i74Y7VVegY8jQQhPs33THLzF8WcqJYQguaDzj3\nWjoU192Zkh3SbraW+971S4aWXQKBgQC1vDhpbV9xBJ29iMtGvFftXJK7a2zCgsdp\nfjWUxw+xCpoQADH5AX0lGuA6iGkgbxptUMXSsBrak/LCdC9sCn/Hfba0OUvCB8X1\ngziOp5wUMPbKBLJYjHGHpkibeDNSPorrFkVjNmkFg11y5n6a+bTe89ayoPVWCz+I\nGBuUtGhtzQKBgBYlMRVBpHijpbOEcSEFvD4KKUfk3hTLuX4joZ0AgW5jNoyR6tGX\nwROPU/wP45P7J+YGtSsF5lLu1uqSnTM4kIPbuRUuItvLAOLc9d1v9mpZc+92rPAT\nIEOmsyUjqNQPS/vkRLG7EVfCAoikKTNgWBb58TGnkqpaqPkmESw9vD4BAoGBAIeD\nBf13FMfNTWHa8tiX8GiJstAV1k9j/RXoikOZ+1VkNmTgAGNQfOSCGdkLhngs4GPK\n6vejYSLDVy0wPXwuiAFU+DuCzb6s1Suw4SdeS7+ykxMoVWQ5tR4VG+bxxjL5d9S8\nEplcJQt7XN8kiBs/P2NQJzOjWc0DLiho8Yf8zjGxAoGAVU4Yv5qeAEVVVVKWxMSh\n5BjocJs0Apc89uf50oAbIu+jcO89bT83yZhCEsPNdg2AY//W+63HmwE+oKDyXPn+\nhYlHBAGr9+HPUGXC4LlG4JmGPkX/rbAxBzMg/iRDjB1BxVoRvvJpM+DrrzLDKCtf\n+Wuimxbgxkm53u2HxsCDIqE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "cs130-translate@seismic-rarity-161023.iam.gserviceaccount.com",
+  "client_id": "111249575374612467781",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cs130-translate%40seismic-rarity-161023.iam.gserviceaccount.com"
+}

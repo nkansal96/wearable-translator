@@ -1,6 +1,12 @@
 # Import the package
 import auroraapi as aurora
 
+# GoogleTranslate packages
+from gTranslate import translate_text
+
+from text2speech import tts
+
+
 # Set your application settings
 aurora.set_app_id("f2f2bd7b9ab7450d5d7fe1fc8a09849c")       # put your app ID here
 aurora.set_app_token("VN4qGg2rrO3lcJYtkBAAFaZSNkCBUf") # put your app token here
@@ -12,8 +18,16 @@ aurora.set_app_token("VN4qGg2rrO3lcJYtkBAAFaZSNkCBUf") # put your app token here
 
 def stt():
     "Returns the string to the "
-    speech = aurora.Speech.listen(length=3)
+    #speech = aurora.Speech.listen(length=3)
+    speech = aurora.Speech.listen(silence_len=1.0s;)
 
     # Convert to text
     p = speech.text()
+    print("")
+    print ("Aurora speech to text:")
+    print("Detected speech: " + p.text)
     return(p.text) # prints the prediction
+    
+text = stt()
+
+tts(translate_text(text))
