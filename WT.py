@@ -8,6 +8,7 @@ from sttR import stt
 
 def wearable_translator(target='es'):
     #Shadi stuff
+    print ("came here")
     text = stt()
     translated = translate_text(text, target)
     ret = t2s.utils.getVoice(target, translated)

@@ -22,7 +22,7 @@ flag = True
 
 #parse input arguments
 if not utils.validateInputArgs(sys.argv):
-	print("Invalid arguments. Expected: \npython3 text2speech.py \"language(optional)\"")
+	print("Invalid arguments. Expected: \npython2 text2speech.py \"language(optional)\"")
 	sys.exit()
 
 #read language from args
@@ -30,7 +30,7 @@ voice = utils.getVoice(languages, sys.argv)
 
 #loop to iterate input
 while flag:
-	text = input("Using " + voice + ". Enter text to convert to speech: \n")
+	text = raw_input("Using " + voice + ". Enter text to convert to speech: \n")
 
 	#validate input and proceed
 	if utils.validateInput(text):
@@ -49,7 +49,7 @@ while flag:
 
 		print('Conversion completed. Playing audio..')
 		playsound('output.mp3')
-		flag = utils.shouldContinue(input('Audio played successfully. Type \'yes\' to continue \'no\' to quit: '))
+		flag = utils.shouldContinue(raw_input('Audio played successfully. Type \'yes\' to continue \'no\' to quit: '))
 	else:
 		print('Input cannot be empty. Please enter a phrase or sentence for conversion')
 
