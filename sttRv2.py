@@ -16,4 +16,7 @@ def stt():
 
     # Convert to text
     p = speech.text()
+    print(p.text)
     return(p.text) # prints the prediction
+    
+stt()
