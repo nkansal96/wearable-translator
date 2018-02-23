@@ -44,7 +44,7 @@ while flag:
 		#convert text input and save temp audio file
 		with open('output.wav', 'w+b') as audio_file:
 			audio_file.write(
-				text_to_speech.synthesize(parsedText, accept='audio/mp3',
+				text_to_speech.synthesize(parsedText, accept='audio/wav',
 				voice=voice))
 
 		print('Conversion completed. Playing audio..')
