@@ -42,13 +42,13 @@ while flag:
 
 		print('\nConverting text to speech with IBM Watson API Text To Speech service..')
 		#convert text input and save temp audio file
-		with open('output.mp3', 'w+b') as audio_file:
+		with open('output.wav', 'w+b') as audio_file:
 			audio_file.write(
 				text_to_speech.synthesize(parsedText, accept='audio/mp3',
 				voice=voice))
 
 		print('Conversion completed. Playing audio..')
-		playsound('output.mp3')
+		playsound('output.wav')
 		flag = utils.shouldContinue(raw_input('Audio played successfully. Type \'yes\' to continue \'no\' to quit: '))
 	else:
 		print('Input cannot be empty. Please enter a phrase or sentence for conversion')
