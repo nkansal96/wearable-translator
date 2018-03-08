@@ -32,7 +32,6 @@ def tts(text):
 
 	#loop to iterate input
 	while flag:
-		#text = raw_input("Using " + voice + ". Enter text to convert to speech: \n")
 
 		#validate input and proceed
 		if utils.validateInput(text):
@@ -51,7 +50,6 @@ def tts(text):
 
 			print('Conversion completed. Playing audio..')
 			playsound('output.mp3')
-			#flag = utils.shouldContinue(raw_input('Audio played successfully. Type \'yes\' to continue \'no\' to quit: '))
 			flag = 0
 		else:
 			print('Input cannot be empty. Please enter a phrase or sentence for conversion')

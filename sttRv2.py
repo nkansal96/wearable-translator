@@ -27,7 +27,9 @@ def stt():
     print ("Aurora speech to text:")
     print("Detected speech: " + p.text)
     return(p.text) # prints the prediction
-    
+
+# Translates Text to Text 
 text = stt()
 
+# Outputs the translated text
 tts(translate_text(text))
