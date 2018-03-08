@@ -4,7 +4,6 @@ import json
 import utils
 import sys
 
-
 def tts(text):
 
 	#language mapping
@@ -17,25 +16,25 @@ def tts(text):
 	"default":"es-ES_EnriqueVoice"
 	}
 
-#Text to Speech service credentials. Refer Instructions text to see where this was retrieved from
-#flag is used to break the loop and exit the program
+	#Text to Speech service credentials. Refer Instructions text to see where this was retrieved from
+	#flag is used to break the loop and exit the program
 	username = 'c2f3926e-b27d-4fa1-bb90-c5b7527df00c'
 	password = 'Bxg3lwBI7LNb'
 	flag = True
 
-#parse input arguments
+	#parse input arguments
 	if not utils.validateInputArgs(sys.argv):
 		print("Invalid arguments. Expected: \npython2 text2speech.py \"language(optional)\"")
 		sys.exit()
 
-#read language from args
+	#read language from args
 	voice = utils.getVoice(languages, sys.argv)
 
-#loop to iterate input
+	#loop to iterate input
 	while flag:
-		text = raw_input("Using " + voice + ". Enter text to convert to speech: \n")
+		#text = raw_input("Using " + voice + ". Enter text to convert to speech: \n")
 
-	#validate input and proceed
+		#validate input and proceed
 		if utils.validateInput(text):
 			parsedText = text.strip()
 			text_to_speech = TextToSpeechV1(
@@ -52,7 +51,9 @@ def tts(text):
 
 			print('Conversion completed. Playing audio..')
 			playsound('output.mp3')
-			flag = utils.shouldContinue(raw_input('Audio played successfully. Type \'yes\' to continue \'no\' to quit: '))
+			#flag = utils.shouldContinue(raw_input('Audio played successfully. Type \'yes\' to continue \'no\' to quit: '))
+			flag = 0
 		else:
 			print('Input cannot be empty. Please enter a phrase or sentence for conversion')
+			
 

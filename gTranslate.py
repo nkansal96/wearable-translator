@@ -1,5 +1,6 @@
 from google.cloud import translate
 import os
+import six
 
 # target language is by iso 639-1
 def translate_text(text, target='es'):
@@ -8,12 +9,17 @@ def translate_text(text, target='es'):
 
     translate_client = translate.Client()
 
+    if isinstance(text, six.binary_type):
+    	text = text.decode('utf-8')
+
+
     result = translate_client.translate(text, target_language=target)
 
     #print (u'Text: ', result['input'])
-    return ('Translation: ', result['translatedText'])
-    #print (u'Detected source lang: ', result['detectedSourceLanguage'])
-
-#example_text = "Hi there. My name is Jason."
-
-#translate_text(example_text)
+    #output = ('Translation: ', result['translatedText'])
+    
+    print ("")
+    print ("Google Translate English text to Spanish text:")
+    print (u'Translation: {}'.format(result['translatedText']))
+    print (u'Detected source lang: {}'.format(result['detectedSourceLanguage']))
+    return (u'{}'.format(result['translatedText']))
