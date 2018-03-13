@@ -4,17 +4,23 @@ import json
 import utils
 import sys
 
-def tts(text):
 
-	#language mapping
+def tts(text, lang):
+
+	#language mapping based on ISO 639-1
 	#see instructions on how to add a new language/voice
 	languages = {
-	"spanish":"es-ES_EnriqueVoice",  #default
-	"english":"en-US_MichaelVoice", 
-	"german":"de-DE_BirgitVoice", 
-	"french":"fr-FR_ReneeVoice",
+	"es":"es-ES_EnriqueVoice",  #default
+	"en":"en-US_MichaelVoice", 
+	"de":"de-DE_BirgitVoice", 
+	"fr":"fr-FR_ReneeVoice",
+	"it":"it-IT_FrancescaVoice",
+	"ja":"ja-JP_EmiVoice",
+	"pt":"pt-BR_IsabelaVoice",
 	"default":"es-ES_EnriqueVoice"
 	}
+	
+	
 
 	#Text to Speech service credentials. Refer Instructions text to see where this was retrieved from
 	#flag is used to break the loop and exit the program
@@ -28,7 +34,10 @@ def tts(text):
 		sys.exit()
 
 	#read language from args
-	voice = utils.getVoice(languages, sys.argv)
+	#voice = utils.getVoice(languages, sys.argv)
+	
+	voice = languages[lang]
+	
 
 	#loop to iterate input
 	while flag:

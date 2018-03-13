@@ -19,7 +19,5 @@ def translate_text(text, target='es'):
     #output = ('Translation: ', result['translatedText'])
     
     print ("")
-    print ("Google Translate English text to Spanish text:")
     print (u'Translation: {}'.format(result['translatedText']))
-    print (u'Detected source lang: {}'.format(result['detectedSourceLanguage']))
     return (u'{}'.format(result['translatedText']))
