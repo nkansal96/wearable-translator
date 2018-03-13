@@ -64,5 +64,6 @@ def tts(text, lang):
 			flag = 0
 		else:
 			print('Input cannot be empty. Please enter a phrase or sentence for conversion')
+			break
 			
 
