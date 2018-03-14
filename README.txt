@@ -72,7 +72,7 @@ To use the wearable-translator application, some configuration steps have to be 
 ----EXECUTION----
 
 To execute the wearable translator, run the following command in your command line:
-  python2 translator.py language app_id app_token
+  python2 translator.py language app_id app_token device_id
  
 Replace "language" with the ISO 639-A acronym of your desired target language.
   Supported languages:
@@ -88,6 +88,7 @@ Replace "language" with the ISO 639-A acronym of your desired target language.
                         
 Replace "app_id" with your Aurora application id.
 Replace "app_token" with your Aurora application token.
+Replace "device_id" with the id of the device the application is running on.
 
 Example of a command line argument that would have the translator translate to Spanish:
-  python2 translator.py es f2f2bd7b9ab7450d5d7fe1fc8a09849c VN4qGg2rrO3lcJYtkBAAFaZSNkCBUf
+  python2 translator.py es f2f2bd7b9ab7450d5d7fe1fc8a09849c VN4qGg2rrO3lcJYtkBAAFaZSNkCBUf 1234
