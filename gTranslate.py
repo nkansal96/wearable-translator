@@ -14,9 +14,6 @@ def translate_text(text, target='es'):
 
 
     result = translate_client.translate(text, target_language=target)
-
-    #print (u'Text: ', result['input'])
-    #output = ('Translation: ', result['translatedText'])
     
     print ("")
     print (u'Translation: {}'.format(result['translatedText']))

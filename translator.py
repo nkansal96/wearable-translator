@@ -6,15 +6,34 @@ import sys
 from gTranslate import translate_text
 from text2speech import tts
 
+#Collect app id and app token
+
+if (len(sys.argv) != 4):
+	language = 'es' #Make default language spanish
+	print ("Must input language, app-id and token-id")
+	sys.exit() 
+else:
+	if ((sys.argv[1] != "es") and (sys.argv[1] != "en") and (sys.argv[1] != "de") and (sys.argv[1] != "fr") and (sys.argv[1] != "it") and (sys.argv[1] != "ja") and (sys.argv[1] != "pt")):
+		print ("Language parameter must be in ISO 639-1 form")
+		sys.exit()
+
+	language = sys.argv[1]
+	app_id = sys.argv[2]
+	app_token = sys.argv[3]
+	# Set your application settings
+	aurora.set_app_id(app_id) # put your app ID here
+	aurora.set_app_token(app_token) # put your app token here
+
+
 
 # Set your application settings
-aurora.set_app_id("f2f2bd7b9ab7450d5d7fe1fc8a09849c") # put your app ID here
-aurora.set_app_token("VN4qGg2rrO3lcJYtkBAAFaZSNkCBUf") # put your app token here
+#aurora.set_app_id("f2f2bd7b9ab7450d5d7fe1fc8a09849c") # put your app ID here
+#aurora.set_app_token("VN4qGg2rrO3lcJYtkBAAFaZSNkCBUf") # put your app token here
 
 # Start listening until 1.0s of silence
 # Or specify your own silence timeout
 
-language = ""
+
 
 def stt():
     "Returns the string to the "
@@ -31,11 +50,6 @@ def stt():
     
 #Executable from now on
 text = stt() #speech to text
-
-if (len(sys.argv) != 2):
-	language = 'es' #Make default language spanish
-else:
-	language = sys.argv[1] 
 	
 tts(translate_text(text, language), language) #text to speech
 

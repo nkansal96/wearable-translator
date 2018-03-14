@@ -22,45 +22,40 @@ def tts(text, lang):
 	
 	
 
-	#Text to Speech service credentials. Refer Instructions text to see where this was retrieved from
+	#Text to Speech service credentials
 	#flag is used to break the loop and exit the program
 	username = 'c2f3926e-b27d-4fa1-bb90-c5b7527df00c'
 	password = 'Bxg3lwBI7LNb'
 	flag = True
 
 	#parse input arguments
-	if not utils.validateInputArgs(sys.argv):
+	if not utils.validateInputArgs(sys.argv[1]): 
+	#CHANGE MADE HERE: sys.argv --> sys.argv[1]
 		print("Invalid arguments. Expected: \npython2 text2speech.py \"language(optional)\"")
 		sys.exit()
-
-	#read language from args
-	#voice = utils.getVoice(languages, sys.argv)
 	
+	#get voice and lanugage from 2nd parameter argument
 	voice = languages[lang]
 	
 
 	#loop to iterate input
 	while flag:
-		#text = raw_input("Using " + voice + ". Enter text to convert to speech: \n")
-
 		#validate input and proceed
 		if utils.validateInput(text):
 			parsedText = text.strip()
 			text_to_speech = TextToSpeechV1(
 				username=username,
 				password=password,
-				x_watson_learning_opt_out=False)# Optional flag
-
-			print('\nConverting text to speech with IBM Watson API Text To Speech service..')
+				x_watson_learning_opt_out=False)
+				# Optional flag
+				
 			#convert text input and save temp audio file
 			with open('output.mp3', 'w+b') as audio_file:
 				audio_file.write(
-					text_to_speech.synthesize(parsedText, accept='audio/mp3',
-					voice=voice))
+					text_to_speech.synthesize(parsedText, accept='audio/mp3', voice=voice))
 
 			print('Conversion completed. Playing audio..')
 			playsound('output.mp3')
-			#flag = utils.shouldContinue(raw_input('Audio played successfully. Type \'yes\' to continue \'no\' to quit: '))
 			flag = 0
 		else:
 			print('Input cannot be empty. Please enter a phrase or sentence for conversion')
