@@ -1,5 +1,5 @@
-Tests for Aurora API and Google Translate API
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tests for Aurora API
+~~~~~~~~~~~~~~~~~~~~
 
 (silence)
 "Z"
