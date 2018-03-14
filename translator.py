@@ -8,9 +8,9 @@ from text2speech import tts
 
 #Collect app id and app token
 
-if (len(sys.argv) != 4):
+if (len(sys.argv) != 5):
 	language = 'es' #Make default language spanish
-	print ("Must input language, app-id and token-id")
+	print ("Must input language, app-id, token-id, and device id")
 	sys.exit() 
 else:
 	if ((sys.argv[1] != "es") and (sys.argv[1] != "en") and (sys.argv[1] != "de") and (sys.argv[1] != "fr") and (sys.argv[1] != "it") and (sys.argv[1] != "ja") and (sys.argv[1] != "pt")):
@@ -20,9 +20,11 @@ else:
 	language = sys.argv[1]
 	app_id = sys.argv[2]
 	app_token = sys.argv[3]
+	device_id = sys.argv[4]
 	# Set your application settings
 	aurora.set_app_id(app_id) # put your app ID here
 	aurora.set_app_token(app_token) # put your app token here
+	aurora.set_device_id(device_id)
 
 
 
