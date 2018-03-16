@@ -45,14 +45,13 @@ def tts(text, lang):
 			parsedText = text.strip()
 			text_to_speech = TextToSpeechV1(
 				username=username,
-				password=password,
-				x_watson_learning_opt_out=False)
-				# Optional flag
+				password=password)
+				# Optional flagFalse
 				
 			#convert text input and save temp audio file
 			with open('output.mp3', 'w+b') as audio_file:
 				audio_file.write(
-					text_to_speech.synthesize(parsedText, accept='audio/mp3', voice=voice))
+					text_to_speech.synthesize(parsedText, accept='audio/mp3', voice=voice).content)
 
 			print('Conversion completed. Playing audio..')
 			playsound('output.mp3')
