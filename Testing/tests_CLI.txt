@@ -2,7 +2,7 @@ Command Line Testing for translator.py
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Command Line Format
-$ python translator.py language app_id app_token device_id
+$ python2 translator.py language app_id app_token device_id
   - language:  Target language for translation from english. Given in ISO 639-1 notation
   - app_id:    Application ID For Aurora API
   - app_token: Application token for Aurora API
